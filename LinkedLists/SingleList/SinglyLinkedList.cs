@@ -1,4 +1,5 @@
-﻿namespace SingleList;
+﻿
+namespace SingleList;
 
 public class SinglyLinkedList<T>
 {
@@ -105,5 +106,54 @@ public class SinglyLinkedList<T>
             current = next;
         }
         head = prev;
+    }
+    public void OrdenarAscendente()
+    {
+        var elementos = new List<T>();
+        var current = head;
+
+        while (current != null)
+        {
+            elementos.Add(current.Data!);
+            current = current.Next;
+        }
+
+        elementos.Sort();
+
+        Clear();
+        foreach (var item in elementos)
+        {
+            InsertAtEnd(item);
+        }
+    }
+
+    public void OrdenarDescendente()
+    {
+        var elementos = new List<T>();
+        var current = head;
+
+        while (current != null)
+        {
+            elementos.Add(current.Data!);
+            current = current.Next;
+        }
+
+        elementos.Sort((a, b) => Comparer<T>.Default.Compare(b, a)); // Use Comparer<T>.Default for type-safe comparison
+
+        Clear();
+        foreach (var item in elementos)
+        {
+            InsertAtEnd(item);
+        }
+    }
+
+    public void SortAscending()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SortDescending()
+    {
+        throw new NotImplementedException();
     }
 }

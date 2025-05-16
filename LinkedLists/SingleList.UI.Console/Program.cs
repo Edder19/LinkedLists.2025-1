@@ -65,6 +65,18 @@ do
             singleList.Reverse();
             Console.WriteLine("List reversed.");
             break;
+
+            
+            case "8":
+            singleList.SortAscending();
+            Console.WriteLine("List sorted in ascending order.");
+            break;
+
+        case "9":
+            singleList.SortDescending();
+            Console.WriteLine("List sorted in descending order.");
+            break;
+
     }
 } while (opc != "0");
 
