@@ -13,8 +13,7 @@ do
             var dataAtBeginning = Console.ReadLine();
             if (dataAtBeginning != null)
             {
-                // Insert at beginning logic manually since no method exists
-                list.InsertSorted(dataAtBeginning); // closest match
+                list.InsertSorted(dataAtBeginning); 
             }
             break;
 
@@ -23,8 +22,8 @@ do
             var dataAtEnd = Console.ReadLine();
             if (dataAtEnd != null)
             {
-                // Insert at end not public, so use InsertSorted assuming sorted add at end
-                list.InsertSorted(dataAtEnd); // fallback due to private InsertAtEnd
+                
+                list.InsertSorted(dataAtEnd); 
             }
             break;
 
@@ -90,7 +89,7 @@ do
             if (removeOne != null)
             {
                 Console.WriteLine("Removing first occurrence not implemented; removing all instead.");
-                list.RemoveFirstOccurrence(removeOne); // fallback
+                list.RemoveFirstOccurrence(removeOne);
             }
             break;
 

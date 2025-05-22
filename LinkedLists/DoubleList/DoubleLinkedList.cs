@@ -16,7 +16,7 @@ public class DoublyLinkedList<T>
         _head = null;
     }
 
-    // Method to insert a node at the end of the list
+    
     private void InsertAtEnd(T data)
     {
         var newNode = new DoubleNode<T>(data);
@@ -121,7 +121,7 @@ public class DoublyLinkedList<T>
                 else
                     _tail = current.Prev;
 
-                return; // Importante: salimos después de eliminar la primera
+                return; 
             }
             current = current.Next;
         }
@@ -138,7 +138,7 @@ public class DoublyLinkedList<T>
             {
                 var toRemove = current;
                 current = current.Next;
-                // Inline removal logic since Remove method does not exist
+               
                 if (toRemove.Prev != null)
                     toRemove.Prev.Next = toRemove.Next;
                 else
