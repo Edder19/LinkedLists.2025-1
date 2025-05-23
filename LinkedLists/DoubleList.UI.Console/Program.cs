@@ -108,8 +108,8 @@ while (opc != "0");
 
 string Menu()
 {
-    Console.WriteLine("1. Insert at beginning (uses sorted insert)");
-    Console.WriteLine("2. Insert at end (uses sorted insert)");
+    Console.WriteLine("1. Insert at beginning ");
+    Console.WriteLine("2. Insert at end ");
     Console.WriteLine("3. Show list forward");
     Console.WriteLine("4. Show list backward");
     Console.WriteLine("5. Remove");
@@ -118,7 +118,7 @@ string Menu()
     Console.WriteLine("8. Show mode(s)");
     Console.WriteLine("9. Show frequency graph");
     Console.WriteLine("10. Check existence");
-    Console.WriteLine("11. Remove first occurrence (not implemented)");
+    Console.WriteLine("11. Remove first occurrence ");
     Console.WriteLine("12. Remove all occurrences");
     Console.WriteLine("0. Exit");
     Console.Write("Choose an option: ");

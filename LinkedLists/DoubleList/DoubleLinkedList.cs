@@ -46,7 +46,8 @@ public class DoublyLinkedList<T>
         }
 
         var current = _head;
-        while (current != null && string.Compare(data!.ToString(), current.Data!.ToString(), StringComparison.Ordinal) > 0)
+        while (current != null && string.Compare(data!.ToString(), current.Data!.ToString(), StringComparison.CurrentCultureIgnoreCase) > 0)
+
         {
             current = current.Next;
         }
@@ -83,7 +84,8 @@ public class DoublyLinkedList<T>
             current = current.Next;
         }
 
-        values.Sort((a, b) => string.Compare(b!.ToString(), a!.ToString(), StringComparison.Ordinal));
+        values.Sort((a, b) => string.Compare(b!.ToString(), a!.ToString(), StringComparison.CurrentCultureIgnoreCase));
+
 
         _head = null;
         _tail = null;
